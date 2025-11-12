@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       # Authentication endpoints
       namespace :auth do
         post 'login', to: 'sessions#create'
+        post 'refresh', to: 'sessions#refresh'
         delete 'logout', to: 'sessions#destroy'
         post 'signup', to: 'registrations#create'
         post 'forgot_password', to: 'passwords#create'
